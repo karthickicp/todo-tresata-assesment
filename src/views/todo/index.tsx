@@ -85,12 +85,12 @@ export const Todo = () => {
                   className="todo-header"
                   onClick={() => handleToggle(status)}
                 >
-                  <span className="todo-header-title">
+                  <h3 className="todo-header-title">
                     {status}
                     <span className="todo-count">
                       ({todoWithStatus[status].length})
                     </span>
-                  </span>
+                  </h3>
 
                   <span
                     className={`todo-arrow ${
@@ -111,7 +111,7 @@ export const Todo = () => {
                           </div>
                           <div className="todo-right">
                             <div className="todo-title-sec">
-                              <h3 className="todo-title">{todo.title}</h3>
+                              <h4 className="todo-title">{todo.title}</h4>
                               <div className="status-section">
                                 <span className={`status-dot ${todo.status}`} />
                                 <span className="todo-status">{status}</span>
@@ -119,12 +119,12 @@ export const Todo = () => {
                             </div>
                             <p className="todo-desc">{todo.description}</p>
                             <div className="todo-action">
-                              <div className="todo-date">
+                              <p className="todo-date">
                                 {getFormattedDate(
                                   todo.created_at,
                                   DAY_DATE_MONTH_YEAR_FORMAT
                                 )}
-                              </div>
+                              </p>
                               <div className="todo-action-items">
                                 <img
                                   src={editIcon}
